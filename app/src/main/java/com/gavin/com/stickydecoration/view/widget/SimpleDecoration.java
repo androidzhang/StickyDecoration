@@ -12,9 +12,7 @@ import android.view.View;
  * Created date 17/6/4
  * Created log  简单的分割线
  */
-
 public class SimpleDecoration extends RecyclerView.ItemDecoration {
-
     private int mHeight = 5; //分割线高度
     private String mDecorationColor = "#48BDFF"; //分割线颜色
     private Paint mPaint;
@@ -23,7 +21,6 @@ public class SimpleDecoration extends RecyclerView.ItemDecoration {
         mPaint = new Paint();
         mPaint.setColor(Color.parseColor(mDecorationColor));
     }
-
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
@@ -33,7 +30,6 @@ public class SimpleDecoration extends RecyclerView.ItemDecoration {
             outRect.top = mHeight;
         }
     }
-
     @Override
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
         super.onDraw(c, parent, state);
